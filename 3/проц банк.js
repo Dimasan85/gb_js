@@ -16,6 +16,20 @@ console.log("Общий доход за период в " + mesjac +
             + (Math.round(resalt - vklad)) + " у.е.");//вывод результата
 
 
+            let vklad = prompt('Ввидите размер вкдада.');
+let procent = prompt('Ввидите годовой процент.');
+let mesjac = prompt('Видите кол-во месяцев.');
+ proc = (procent / 100 / 12);
+resalt = +vklad
+for(let n = 1; n <= +mesjac; n++) {
+  resalt = +resalt + resalt * proc;
+  console.log("Доход в " + n + "м месяце при ставки " + procent + "% годовых = " 
+              + (Math.round(resalt - vklad)) + " у.е..");
+}
+console.log("Общий доход при ставки " + procent + "% годовых за период в " + mesjac + 
+            " месяцев при вкладе " + vklad + " у.е. составит "
+            + (Math.round(resalt - vklad)) + " у.е..");
+
 
 /*Необходимо написать программу, которая вычисляет сложные проценты 
 по банковскому вкладу и выводит пользователю результат, детализированный по месяцам. 
